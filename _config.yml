@@ -29,9 +29,29 @@ url: https://pt-ki.github.io # the base hostname & protocol for your site, e.g. 
 domain: pt-ki.github.io
 
 # Build settings
-theme: minima
+# theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-include-cache # required by minimal-mistakes theme
+
+gems:
+  - jekyll-remote-theme
+
+remote_theme: "mmistakes/minimal-mistakes@4.27.3"
+
+defaults:
+  # Default values for all pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+# Navigation
+masthead_title: " " # blank space hides the site title in the navigation
+atom_feed:
+  hide: true # hide RSS feed
 
 # Exclude from processing.
 # The following items will not be processed, by default.
