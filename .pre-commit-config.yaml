@@ -18,6 +18,6 @@ repos:
         pass_filenames: false
       - id: htmlproofer
         name: htmlproofer
-        entry: bundle exec htmlproofer ./_site --check-html
+        entry: bash -c 'bundle exec jekyll build && bundle exec htmlproofer ./_site'
         language: system
         pass_filenames: false
