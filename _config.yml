@@ -32,10 +32,8 @@ domain: pt-ki.github.io
 # theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-include-cache # required by minimal-mistakes theme
-
-gems:
   - jekyll-remote-theme
+  - jekyll-include-cache
 
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
