@@ -35,9 +35,6 @@ plugins:
   - jekyll-include-cache
   - jekyll-redirect-from
 
-gems:
-  - jekyll-redirect-from
-
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
 defaults:
