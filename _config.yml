@@ -29,11 +29,13 @@ url: https://pt-ki.github.io # the base hostname & protocol for your site, e.g. 
 domain: pt-ki.github.io
 
 # Build settings
-# theme: minima
 plugins:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-include-cache
+
+gems:
+  - jekyll-redirect-from
 
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
