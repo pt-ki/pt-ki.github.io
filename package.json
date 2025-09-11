@@ -1,0 +1,12 @@
+{
+  "name": "image-pipeline",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "img:build": "node tools/build-images.js"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.2",
+    "sharp": "^0.33.3"
+  }
+}
