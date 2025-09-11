@@ -1,5 +1,7 @@
 main:
-  - title: "Home"
+  - title: "Beranda"
     url: /
-  - title: "About"
+  - title: "Produk"
+    url: /products/
+  - title: "Tentang Kami"
     url: /about/

@@ -1,0 +1,4 @@
+---
+title: Products
+permalink: /products/
+---
