@@ -40,7 +40,7 @@ plugins:
 
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
-logo: /assets/images/masthead.jpg
+logo: /assets/images/masthead.png
 
 defaults:
   # Default values for all pages

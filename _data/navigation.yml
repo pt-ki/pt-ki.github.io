@@ -1,7 +1,7 @@
 main:
   - title: "Beranda"
     url: /
-  - title: "Produk"
+  - title: "Produk & Layanan"
     url: /products/
   - title: "Tentang Kami"
     url: /about/

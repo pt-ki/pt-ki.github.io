@@ -1,5 +1,5 @@
 ---
-title: About
+title: Tentang Kami
 permalink: /about/
 ---
 
