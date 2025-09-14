@@ -6,15 +6,15 @@ permalink: /products/
 feature_row:
 
 - image_path: assets/images/originals/products/three_chlorine_cyl.jpg
-  alt:
+  alt: "Chlorine Cylinder"
   title: Gas Klorin
   url: /products/chlorine/
 - image_path: assets/images/originals/products/gas_feed_v2000_gen6.jpg
-  alt:
+  alt: "Chlorinator"
   title: Sistem Penyuplai Gas
   url: /products/gas_feed_system/
 - image_path: assets/images/originals/products/gms_plus.jpg
-  alt:
+  alt: "Safety System Chlorine"
   title: Sistem Keamanan Klorin
   url: /products/safety_system/
 - image_path:
@@ -22,7 +22,7 @@ feature_row:
   title: Instalasi Sistem Klorin
   url: /products/installation/
 - image_path: assets/images/originals/products/daito-small.jpg
-  alt:
+  alt: "Spareparts"
   title: Suku Cadang dan Aksesoris
   url: /products/spareparts/
 
