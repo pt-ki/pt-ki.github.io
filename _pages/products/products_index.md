@@ -1,7 +1,8 @@
 ---
-layout: products_main
+layout: products_index
 title: Produk dan Layanan
 permalink: /products/
+page_css: /assets/css/products_index.css
 
 feature_row:
 
@@ -17,7 +18,7 @@ feature_row:
   alt: "Safety System Chlorine"
   title: Sistem Keamanan Klorin
   url: /products/safety_system/
-- image_path:
+- image_path: assets/images/originals/products/white.jpg
   alt:
   title: Instalasi Sistem Klorin
   url: /products/installation/
@@ -27,4 +28,4 @@ feature_row:
   url: /products/spareparts/
 
 ---
-{% include feature_row %}
+{% include feature_row_custom %}

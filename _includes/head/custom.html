@@ -1,1 +1,10 @@
-<link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+<link
+    rel="icon"
+    href="{{ '/assets/images/favicon.ico' | relative_url }}"
+    type="image/x-icon"
+/>
+
+<!--Add custom page CSS files using page_css in front matter -->
+{% if page.page_css %} {% for stylesheet in page.page_css %}
+<link rel="stylesheet" href="{{ stylesheet | relative_url }}" />
+{% endfor %} {% endif %}
