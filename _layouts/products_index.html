@@ -1,7 +1,8 @@
 ---
 layout: default
 ---
-
+<!-- New layout type from modification of splash.html
+  -->
 {% if page.header.overlay_color or page.header.overlay_image or
 page.header.image %} {% include page__hero.html %} {% elsif page.header.video.id
 and page.header.video.provider %} {% include page__hero_video.html %} {% endif
@@ -35,6 +36,7 @@ and page.header.video.provider %} {% include page__hero_video.html %} {% endif
             content="{{ page.last_modified_at | date_to_xmlschema }}"
         />{% endif %}
 
+        <!-- Title without anchor link, so it don't be activated by assets/js/_main.js -->
         <section class="page__content" itemprop="text">
             {% if page.title -%}
             <br />
