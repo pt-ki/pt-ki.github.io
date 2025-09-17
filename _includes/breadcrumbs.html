@@ -1,0 +1,31 @@
+<nav class="breadcrumb">
+    {% assign data = site.data.product_breadcrumbs %} {% assign idx = data.index
+    %} {%- comment -%} use permalink if present, otherwise page.url {%-
+    endcomment -%} {% assign purl = page.permalink | default: page.url %} {%
+    assign parts = purl | split: '/' %} {%- comment -%} find last two non-empty
+    segments (product_key, parent_key) {%- endcomment -%} {% assign
+    page_product_key = "" %} {% assign page_parent_key = "" %} {% for part in
+    parts reversed %} {% if part != "" and page_product_key == "" %} {% assign
+    page_product_key = part %} {% elsif part != "" and page_parent_key == "" %}
+    {% assign page_parent_key = part %} {% endif %} {% endfor %} {%- comment -%}
+    normalize top-level 'products' to 'index' and ignore 'products' as a parent
+    {%- endcomment -%} {% if page_product_key == "products" or page_product_key
+    == "" %} {% assign page_product_key = "index" %} {% endif %} {% if
+    page_parent_key == "products" %} {% assign page_parent_key = "" %} {% endif
+    %} {%- comment -%} If we're on the products index, just show the index title
+    unlinked {%- endcomment -%} {% if page_product_key == "index" or purl ==
+    idx.url %} {{ idx.title }} {% else %}
+    <a href="{{ site.baseurl }}{{ idx.url }}">{{ idx.title }}</a>
+
+    {%- comment -%} show parent link only when it's a real parent (not empty)
+    {%- endcomment -%} {% if page_parent_key and page_parent_key != "" %} {%
+    assign parent = data[page_parent_key] %} {% if parent %} &nbsp;&gt;&nbsp;<a
+        href="{{ site.baseurl }}{{ parent.url }}"
+        >{{ parent.title }}</a
+    >
+    {% endif %} {% endif %} {%- comment -%} current leaf/category always
+    rendered as plain text (no link) {%- endcomment -%} {% if page_product_key
+    %} {% assign current = data[page_product_key] %} {% if current %}
+    &nbsp;&gt;&nbsp;{{ current.title }} {% else %} &nbsp;&gt;&nbsp;{{ page.title
+    }} {% endif %} {% endif %} {% endif %}
+</nav>

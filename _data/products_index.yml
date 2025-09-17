@@ -1,0 +1,16 @@
+- name: "Gas Klorin"
+  image: ""
+  alt:
+  url: /products/chlorine/
+- name: "Sistem Penyuplai Gas"
+  image: ""
+  alt:
+  url: /products/gas_feed_system/
+- name: "Instalasi Sistem Klorin"
+  image: ""
+  alt:
+  url: /products/installation/
+- name: "Suku Cadang dan Aksesoris"
+  image: ""
+  alt:
+  url: /products/spareparts/

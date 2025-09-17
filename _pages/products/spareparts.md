@@ -1,6 +1,6 @@
 ---
 permalink: /products/spareparts/
-page_css: /assets/css/product_items_feature.css
+page_css: /assets/css/product_subcategory.css
 feature_row:
 
 - image_path: /assets/images/originals/products/daito-small.jpg
@@ -13,5 +13,6 @@ feature_row:
   excerpt: JE 3520
 
 ---
+{% include breadcrumbs.html %}
 
-{% include feature_row %}
+{% include feature_row_custom.html %}

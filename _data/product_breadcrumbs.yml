@@ -1,0 +1,43 @@
+index:
+  title: "Produk dan Layanan"
+  url: "/products/"
+
+gas_feed_system:
+  title: "Sistem Penyuplai Gas"
+  url: "/products/gas_feed_system/"
+
+chlorine:
+  title: "Gas Klorin"
+  url: "/products/chlorine/"
+
+safety_system:
+  title: "Sistem Keamanan Klorin"
+  url: "/products/safety_system/"
+
+installation:
+  title: "Instalasi Sistem Klorin"
+  url: "/products/installation/"
+
+spareparts:
+  title: "Suku Cadang dan Aksesoris"
+  url: "/products/spareparts/"
+
+s10k_chlorinator:
+  title: "Gas Feed S10K Chlorinator"
+  url: "/products/gas_feed_system/s10k_chlorinator/"
+
+v2000_gen6:
+  title: "Gas Feed V2000 Gen6"
+  url: "/products/gas_feed_system/v2000_gen6/"
+
+series_50-200_evaporator:
+  title: "Series 50-200 Evaporator"
+  url: "/products/gas_feed_system/series_50-200_evaporator/"
+
+gms_plus:
+  title: "GMS Plus"
+  url: "/products/gas_feed_system/gms_plus/"
+
+emergency_shutoff_drive:
+  title: "Emergency Shutoff Drive"
+  url: "/products/safety_system/emergency_shutoff_drive/"

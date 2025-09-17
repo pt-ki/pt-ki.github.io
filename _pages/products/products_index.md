@@ -2,7 +2,7 @@
 layout: products_index
 title: Produk dan Layanan
 permalink: /products/
-page_css: /assets/css/products_index.css
+page_css: /assets/css/product_subcategory.css
 
 feature_row:
 
@@ -28,4 +28,4 @@ feature_row:
   url: /products/spareparts/
 
 ---
-{% include feature_row_custom %}
+{% include feature_row_custom.html %}

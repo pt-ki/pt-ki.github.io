@@ -1,4 +1,5 @@
 ---
+layout: product_single
 permalink: /products/chlorine/
 image_path: /assets/images/originals/products/three_chlorine_cyl.jpg
 alt: "Chlorine cylinders"
