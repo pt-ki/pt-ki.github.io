@@ -5,10 +5,12 @@ feature_row:
 
 - image_path: /assets/images/originals/products/daito-small.jpg
   alt: "Daito Valves"
-  title: Daito JE 2520
+  title: Daito
+  excerpt: JE 2520
 - image_path: /assets/images/originals/products/daito-small.jpg
   alt: "Daito Valves"
-  title: Daito JE 3520
+  title: Daito
+  excerpt: JE 3520
 
 ---
 
