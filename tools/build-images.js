@@ -186,6 +186,22 @@ async function run() {
   console.log(
     `Built responsive images for ${manifest.length} source(s). Manifest written to ${manifestPath}`,
   );
+
+  // Also write manifest into _data so Jekyll can read it during site build.
+  // This makes the manifest available as site.data.images_manifest in Liquid.
+  try {
+    await ensureDir(path.join("_data"));
+    await fs.writeFile(
+      path.join("_data", "images_manifest.json"),
+      JSON.stringify(normalized, null, 2),
+    );
+    console.log("Wrote _data/images_manifest.json for Jekyll consumption.");
+  } catch (err) {
+    console.warn(
+      "Could not write _data/images_manifest.json:",
+      err && err.message ? err.message : err,
+    );
+  }
 }
 
 run().catch((err) => {

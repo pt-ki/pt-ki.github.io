@@ -1,0 +1,82 @@
+{%- comment -%} Responsive image include. Parameters: - src : path to the
+original image (required), e.g. /assets/images/originals/foo.jpg - alt : alt
+text for the image (recommended) - sizes : sizes attribute for srcset (default:
+"100vw") - widths : comma-separated widths used when no manifest is available -
+out_dir : output directory for generated images (default:
+"assets/images/responsive") - class : CSS class to add to the picture element
+(optional) Behavior: - If a manifest entry is available in
+site.data.images_manifest for the image stem, the include uses the generated
+filenames recorded in the manifest. - Otherwise it constructs srcset URLs from
+the widths list and the generator naming convention. {%- endcomment -%} {%-
+assign src = include.src | default: "" -%} {%- if src == "" -%} {%- comment -%}
+nothing to render when src is empty {%- endcomment -%} {%- else -%} {%- assign
+alt = include.alt | default: "" -%} {%- assign cls = include.class | default: ""
+-%} {%- assign sizes = include.sizes | default: "100vw" -%} {%- assign
+widths_param = include.widths | default: "" -%} {%- assign out_dir =
+include.out_dir | default: "assets/images/responsive" -%} {%- assign filename =
+src | split: "/" | last -%} {%- assign stem = filename | split: "." | first -%}
+{%- assign manifest_entry = nil -%} {%- if site.data and
+site.data.images_manifest -%} {%- assign manifest_entry =
+site.data.images_manifest | where: "stem", stem | first -%} {%- endif -%}
+
+<picture class="{{ cls }}">
+    {%- if manifest_entry and manifest_entry.generated and
+    manifest_entry.generated.size > 0 -%} {%- capture avif_srcset -%} {%- for g
+    in manifest_entry.generated -%} {%- if forloop.first == false -%}, {% endif
+    -%}{{ g.avif | relative_url }} {{ g.width }}w {%- endfor -%} {%- endcapture
+    -%} {%- capture webp_srcset -%} {%- for g in manifest_entry.generated -%}
+    {%- if forloop.first == false -%}, {% endif -%}{{ g.webp | relative_url }}
+    {{ g.width }}w {%- endfor -%} {%- endcapture -%} {%- assign last_jpg = nil
+    -%} {%- for g in manifest_entry.generated -%} {%- if g.jpg and g.jpg != ""
+    -%} {%- assign last_jpg = g.jpg -%} {%- endif -%} {%- endfor -%} {%- if
+    avif_srcset != "" -%}
+    <source type="image/avif" srcset="{{ avif_srcset }}" sizes="{{ sizes }}" />
+    {%- endif -%} {%- if webp_srcset != "" -%}
+    <source type="image/webp" srcset="{{ webp_srcset }}" sizes="{{ sizes }}" />
+    {%- endif -%} {%- if last_jpg and last_jpg != "" -%}
+    <img
+        src="{{ last_jpg | relative_url }}"
+        alt="{{ alt | escape }}"
+        loading="lazy"
+        decoding="async"
+    />
+    {%- else -%} {%- assign last_width = manifest_entry.generated | last | dig:
+    "width" | default: "1200" -%}
+    <img
+        src="{{ (out_dir | append: '/' | append: stem | append: '/' | append: stem | append: '-' | append: last_width | append: 'w.jpg') | relative_url }}"
+        alt="{{ alt | escape }}"
+        loading="lazy"
+        decoding="async"
+    />
+    {%- endif -%} {%- else -%} {%- if widths_param == "" -%} {%- assign widths =
+    "480,768,1200,1600" -%} {%- else -%} {%- assign widths = widths_param -%}
+    {%- endif -%} {%- assign widths_arr = widths | split: "," -%} {%- assign
+    counter = 0 -%} {%- assign last_valid = "" -%} {%- capture avif_srcset -%}
+    {%- for w in widths_arr -%} {%- assign wtrim = w | strip -%} {%- if wtrim !=
+    "" -%} {%- if counter > 0 -%}, {% endif -%}{{ (out_dir | append: '/' |
+    append: stem | append: '/' | append: stem | append: '-' | append: wtrim |
+    append: 'w.avif') | relative_url }} {{ wtrim }}w {%- assign counter =
+    counter | plus: 1 -%} {%- assign last_valid = wtrim -%} {%- endif -%} {%-
+    endfor -%} {%- endcapture -%} {%- assign counter = 0 -%} {%- capture
+    webp_srcset -%} {%- for w in widths_arr -%} {%- assign wtrim = w | strip -%}
+    {%- if wtrim != "" -%} {%- if counter > 0 -%}, {% endif -%}{{ (out_dir |
+    append: '/' | append: stem | append: '/' | append: stem | append: '-' |
+    append: wtrim | append: 'w.webp') | relative_url }} {{ wtrim }}w {%- assign
+    counter = counter | plus: 1 -%} {%- assign last_valid = wtrim -%} {%- endif
+    -%} {%- endfor -%} {%- endcapture -%} {%- if last_valid == "" -%} {%- assign
+    last_valid = "1200" -%} {%- endif -%} {%- if avif_srcset != "" -%}
+    <source type="image/avif" srcset="{{ avif_srcset }}" sizes="{{ sizes }}" />
+    {%- endif -%} {%- if webp_srcset != "" -%}
+    <source type="image/webp" srcset="{{ webp_srcset }}" sizes="{{ sizes }}" />
+    {%- endif -%}
+
+    <img
+        src="{{ (out_dir | append: '/' | append: stem | append: '/' | append: stem | append: '-' | append: last_valid | append: 'w.jpg') | relative_url }}"
+        alt="{{ alt | escape }}"
+        loading="lazy"
+        decoding="async"
+    />
+
+    {%- endif -%}
+</picture>
+{%- endif -%}

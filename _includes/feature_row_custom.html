@@ -1,55 +1,63 @@
-{% if include.id %} {% assign feature_row = page[include.id] %} {% else %} {%
-assign feature_row = page.feature_row %} {% endif %}
-
+{%- comment -%} Render a feature row from front matter `feature_row` (or a
+custom key via include.id). Each feature item may contain: - image_path : path
+to original image (e.g. /assets/images/originals/...) - alt : alt text for the
+image - title : title string - excerpt : short excerpt (Markdown allowed) - url
+: optional link for the image/title - image_caption : optional caption for image
+- sizes/widths : optional overrides passed to the responsive include This
+partial renders images using the `responsive_image.html` include so all feature
+images use the same responsive markup and manifest support. {%- endcomment -%}
+{%- if include.id -%} {%- assign feature_row = page[include.id] -%} {%- else -%}
+{%- assign feature_row = page.feature_row -%} {%- endif -%} {%- if feature_row
+and feature_row.size > 0 -%}
 <div class="feature__wrapper">
-    {% for f in feature_row %}
+    {%- for f in feature_row -%}
     <div
         class="feature__item{% if include.type %}--{{ include.type }}{% endif %}"
     >
         <div class="archive__item">
-            {% if f.image_path %}
+            {%- if f.image_path -%}
             <div class="archive__item-teaser">
-                <!-- Render image; wrap in link if URL is provided -->
-                {% if f.url %}
+                {%- assign img_alt = f.alt | default: f.title | default: "" -%}
+                {%- assign img_sizes = f.sizes | default: "(max-width: 600px)
+                100vw, 300px" -%} {%- assign img_widths = f.widths | default:
+                "480,768,1200,1600" -%} {%- if f.url -%}
                 <a href="{{ f.url | relative_url }}">
-                    <img
-                        src="{{ f.image_path | relative_url }}"
-                        alt="{% if f.alt %}{{ f.alt }}{% endif %}"
-                    />
+                    {% include responsive_image.html src=f.image_path
+                    alt=img_alt sizes=img_sizes widths=img_widths
+                    class="archive__item-image" %}
                 </a>
-                {% else %}
-                <img
-                    src="{{ f.image_path | relative_url }}"
-                    alt="{% if f.alt %}{{ f.alt }}{% endif %}"
-                />
-                {% endif %} {% if f.image_caption %}
+                {%- else -%} {% include responsive_image.html src=f.image_path
+                alt=img_alt sizes=img_sizes widths=img_widths
+                class="archive__item-image" %} {%- endif -%} {%- if
+                f.image_caption -%}
                 <span class="archive__item-caption"
-                    >{{ f.image_caption | markdownify | remove: "
+                    >{{ f.image_caption | markdownify | strip_newlines | remove:
+                    "
                     <p>" | remove: "</p>
                     " }}</span
                 >
-                {% endif %}
+                {%- endif -%}
             </div>
-            {% endif %}
+            {%- endif -%}
 
             <div class="archive__item-body">
-                {% if f.title %} {% if f.url %}
-                <!-- Add link to image's title if URL is provided -->
+                {%- if f.title -%} {%- if f.url -%}
                 <a
                     href="{{ f.url | relative_url }}"
                     style="text-decoration: none; color: inherit"
                 >
                     <h2 class="archive__item-title">{{ f.title }}</h2>
                 </a>
-                {% else %}
+                {%- else -%}
                 <h2 class="archive__item-title">{{ f.title }}</h2>
-                {% endif %} {% endif %} {% if f.excerpt %}
+                {%- endif -%} {%- endif -%} {%- if f.excerpt -%}
                 <div class="archive__item-excerpt">
                     {{ f.excerpt | markdownify }}
                 </div>
-                {% endif %}
+                {%- endif -%}
             </div>
         </div>
     </div>
-    {% endfor %}
+    {%- endfor -%}
 </div>
+{%- endif -%}
