@@ -30,6 +30,9 @@ domain: pt-ki.github.io
 
 include:
   - _pages
+exclude:
+  - env
+  - node_modules
 
 # Build settings
 plugins:

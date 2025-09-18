@@ -1,6 +1,11 @@
+assets/images/responsive/
+.DS_Store
+env
 _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+node_modules
 vendor
 venv
+.vscode/
