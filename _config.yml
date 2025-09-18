@@ -33,6 +33,8 @@ include:
 exclude:
   - env
   - node_modules
+  - vendor
+  - vendor/bundle
 
 # Build settings
 plugins:
