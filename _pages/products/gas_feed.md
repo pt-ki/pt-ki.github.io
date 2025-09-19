@@ -1,6 +1,8 @@
 ---
+layout: product_subcategory
 permalink: /products/gas_feed_system/
 page_css: /assets/css/product_subcategory.css
+title: "Sistem Penyuplai Gas"
 feature_row:
 
 - image_path: /assets/images/originals/products/gas_feed_s10k.jpg
@@ -18,8 +20,12 @@ feature_row:
   title: Wallace & Tiernan
   excerpt: Series 50-200 Evaporator
   url: /products/gas_feed_system/series_50-200_evaporator
+- image_path: /assets/images/originals/products/gas_feed_v10k.jpg
+  alt: "Gas Feed V10K"
+  title: Wallace & Tiernan
+  excerpt: Gas Feed V10K
+  url: /products/gas_feed_system/v10k
 
 ---
-{% include breadcrumbs.html %}
 
 {% include feature_row_custom.html %}

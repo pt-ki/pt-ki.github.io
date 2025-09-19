@@ -1,0 +1,34 @@
+/* Product single: keep image and content side-by-side on wide screens */
+.product-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start; /* align the top edges */
+}
+
+.product-media {
+  flex: 0 0 300px;      /* fixed column for the image */
+  max-width: 300px;
+}
+
+.product-media picture,
+.product-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.product-content {
+  flex: 1 1 auto;
+  min-width: 0; /* prevents overflow issues with long content */
+}
+
+/* Responsive: stack on narrow screens */
+@media (max-width: 640px) {
+  .product-row {
+    flex-direction: column;
+  }
+  .product-media {
+    max-width: 100%;
+    flex: none;
+  }
+}

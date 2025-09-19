@@ -58,25 +58,37 @@ layout: default
               Hero overlay present and inline image not explicitly requested;
               skip rendering inline product image to prevent duplication.
             {%- endcomment -%}
+            {{ content }}
+            {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
 
           {% elsif content contains '<img' and page.header.inline_image != true and page.image_inline != true %}
             {%- comment -%}
               Page content already includes an <img>; inline product image not explicitly requested;
               skip rendering to avoid duplicate images.
             {%- endcomment -%}
+            {{ content }}
+            {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
 
           {% else %}
-            <div class="product-media" style="float:left; max-width:300px; margin-right:20px;">
-              {%- comment -%} Precompute variables so include parameters don't contain filter expressions {%- endcomment -%}
-              {% assign img_alt = page.image_alt | default: page.title %}
-              {% assign img_sizes = page.image_sizes | default: "(max-width: 600px) 100vw, 300px" %}
-              {% assign img_widths = page.image_widths | default: "480,768,1200,1600" %}
-              {% include responsive_image.html src=page.image_path alt=img_alt sizes=img_sizes widths=img_widths class="product-image" %}
+            <div class="product-row">
+              <div class="product-media">
+                {%- comment -%} Precompute variables so include parameters don't contain filter expressions {%- endcomment -%}
+                {% assign img_alt = page.image_alt | default: page.title %}
+                {% assign img_sizes = page.image_sizes | default: "(max-width: 600px) 100vw, 300px" %}
+                {% assign img_widths = page.image_widths | default: "480,768,1200,1600" %}
+                {% include responsive_image.html src=page.image_path alt=img_alt sizes=img_sizes widths=img_widths class="product-image" %}
+              </div>
+
+              <div class="product-content">
+                {{ content }}
+                {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
+              </div>
             </div>
           {% endif %}
+        {% else %}
+          {{ content }}
+          {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
         {% endif %}
-        {{ content }}
-        {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
     </div>

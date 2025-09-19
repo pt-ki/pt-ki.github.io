@@ -144,6 +144,42 @@
     ]
   },
   {
+    "source": "assets/images/originals/products/gas_feed_v10k.jpg",
+    "stem": "gas_feed_v10k",
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "generated": [
+      {
+        "width": 480,
+        "avif": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-480w.avif",
+        "webp": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-480w.webp",
+        "jpg": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-480w.jpg",
+        "skipped": true
+      },
+      {
+        "width": 768,
+        "avif": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-768w.avif",
+        "webp": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-768w.webp",
+        "jpg": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-768w.jpg",
+        "skipped": true
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.avif",
+        "webp": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.webp",
+        "jpg": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.jpg",
+        "skipped": true
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.avif",
+        "webp": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.webp",
+        "jpg": "assets/images/responsive/gas_feed_v10k/gas_feed_v10k-1000w.jpg",
+        "skipped": true
+      }
+    ]
+  },
+  {
     "source": "assets/images/originals/products/gas_feed_v2000_gen6.jpg",
     "stem": "gas_feed_v2000_gen6",
     "originalWidth": 1000,
@@ -247,6 +283,78 @@
         "avif": "assets/images/responsive/series_50-200_evaporator/series_50-200_evaporator-1000w.avif",
         "webp": "assets/images/responsive/series_50-200_evaporator/series_50-200_evaporator-1000w.webp",
         "jpg": "assets/images/responsive/series_50-200_evaporator/series_50-200_evaporator-1000w.jpg",
+        "skipped": true
+      }
+    ]
+  },
+  {
+    "source": "assets/images/originals/products/sfc_pc.jpg",
+    "stem": "sfc_pc",
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "generated": [
+      {
+        "width": 480,
+        "avif": "assets/images/responsive/sfc_pc/sfc_pc-480w.avif",
+        "webp": "assets/images/responsive/sfc_pc/sfc_pc-480w.webp",
+        "jpg": "assets/images/responsive/sfc_pc/sfc_pc-480w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 768,
+        "avif": "assets/images/responsive/sfc_pc/sfc_pc-768w.avif",
+        "webp": "assets/images/responsive/sfc_pc/sfc_pc-768w.webp",
+        "jpg": "assets/images/responsive/sfc_pc/sfc_pc-768w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/sfc_pc/sfc_pc-1000w.avif",
+        "webp": "assets/images/responsive/sfc_pc/sfc_pc-1000w.webp",
+        "jpg": "assets/images/responsive/sfc_pc/sfc_pc-1000w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/sfc_pc/sfc_pc-1000w.avif",
+        "webp": "assets/images/responsive/sfc_pc/sfc_pc-1000w.webp",
+        "jpg": "assets/images/responsive/sfc_pc/sfc_pc-1000w.jpg",
+        "skipped": true
+      }
+    ]
+  },
+  {
+    "source": "assets/images/originals/products/sfc_sc.jpg",
+    "stem": "sfc_sc",
+    "originalWidth": 1000,
+    "originalHeight": 1000,
+    "generated": [
+      {
+        "width": 480,
+        "avif": "assets/images/responsive/sfc_sc/sfc_sc-480w.avif",
+        "webp": "assets/images/responsive/sfc_sc/sfc_sc-480w.webp",
+        "jpg": "assets/images/responsive/sfc_sc/sfc_sc-480w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 768,
+        "avif": "assets/images/responsive/sfc_sc/sfc_sc-768w.avif",
+        "webp": "assets/images/responsive/sfc_sc/sfc_sc-768w.webp",
+        "jpg": "assets/images/responsive/sfc_sc/sfc_sc-768w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/sfc_sc/sfc_sc-1000w.avif",
+        "webp": "assets/images/responsive/sfc_sc/sfc_sc-1000w.webp",
+        "jpg": "assets/images/responsive/sfc_sc/sfc_sc-1000w.jpg",
+        "skipped": false
+      },
+      {
+        "width": 1000,
+        "avif": "assets/images/responsive/sfc_sc/sfc_sc-1000w.avif",
+        "webp": "assets/images/responsive/sfc_sc/sfc_sc-1000w.webp",
+        "jpg": "assets/images/responsive/sfc_sc/sfc_sc-1000w.jpg",
         "skipped": true
       }
     ]

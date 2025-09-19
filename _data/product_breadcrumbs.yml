@@ -10,16 +10,16 @@ chlorine:
   title: "Gas Klorin"
   url: "/products/chlorine/"
 
-safety_system:
-  title: "Sistem Keamanan Klorin"
-  url: "/products/safety_system/"
+safety_control_system:
+  title: "Sistem Keamanan dan Kontrol"
+  url: "/products/safety_control_system/"
 
 installation:
-  title: "Instalasi Sistem Klorin"
+  title: "Instalasi Sistem"
   url: "/products/installation/"
 
 spareparts:
-  title: "Suku Cadang dan Aksesoris"
+  title: "Suku Cadang dan Aksesori"
   url: "/products/spareparts/"
 
 s10k_chlorinator:
@@ -36,8 +36,12 @@ series_50-200_evaporator:
 
 gms_plus:
   title: "GMS Plus"
-  url: "/products/gas_feed_system/gms_plus/"
+  url: "/products/safety_control_system/gms_plus/"
 
 emergency_shutoff_drive:
   title: "Emergency Shutoff Drive"
-  url: "/products/safety_system/emergency_shutoff_drive/"
+  url: "/products/safety_control_system/emergency_shutoff_drive/"
+
+sfc_pc:
+  title: "SFC PC Process Controller"
+  url: "/products/safety_control_system/emergency_shutoff_drive/"

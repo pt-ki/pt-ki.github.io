@@ -16,15 +16,15 @@ feature_row:
   url: /products/gas_feed_system/
 - image_path: assets/images/originals/products/gms_plus.jpg
   alt: "Safety System Chlorine"
-  title: Sistem Keamanan Klorin
-  url: /products/safety_system/
+  title: Sistem Keamanan dan Kontrol
+  url: /products/safety_control_system/
 - image_path: assets/images/originals/products/white.jpg
   alt:
-  title: Instalasi Sistem Klorin
+  title: Instalasi Sistem
   url: /products/installation/
 - image_path: assets/images/originals/products/daito-small.jpg
   alt: "Spareparts"
-  title: Suku Cadang dan Aksesoris
+  title: Suku Cadang dan Aksesori
   url: /products/spareparts/
 
 ---
