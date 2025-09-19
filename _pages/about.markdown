@@ -3,17 +3,18 @@ title: Tentang Kami
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out
-more info about customizing your Jekyll theme,
-as well as basic Jekyll usage documentation at
-[jekyllrb.com](https://jekyllrb.com/)
+PT Khlorin Inti adalah perusahaan penyedia gas klorin dan sistem
+klorinasi yang mendukung berbagai sektor industri. Kami melayani
+pengolahan air minum, pengolahan limbah industri, serta aplikasi
+kimia lainnya.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+Keunggulan kami terletak pada:
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+- Produk berkualitas tinggi yang sesuai standar nasional maupun
+  internasional
+- Layanan distribusi yang andal dan tepat waktu
+- Dukungan teknis dari tim yang berpengalaman
 
-[jekyll-organization]: https://github.com/jekyll
+Kami berkomitmen menjadi mitra solusi terpercaya yang membantu
+pelanggan mencapai operasi industri yang lebih aman, efisien, dan
+berkelanjutan.
