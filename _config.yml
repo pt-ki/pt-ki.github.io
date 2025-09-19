@@ -42,6 +42,7 @@ plugins:
   - jekyll-remote-theme
   - jekyll-include-cache
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 remote_theme: "mmistakes/minimal-mistakes@4.27.3"
 
