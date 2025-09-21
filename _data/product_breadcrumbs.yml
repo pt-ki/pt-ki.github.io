@@ -45,3 +45,7 @@ emergency_shutoff_drive:
 sfc_pc:
   title: "SFC PC Process Controller"
   url: "/products/safety_control_system/emergency_shutoff_drive/"
+
+daito_valves:
+  title: "Daito Valve"
+  url: "/products/spareparts/daito_valve/"

@@ -6,13 +6,10 @@ title: "Suku Cadang dan Aksesori"
 feature_row:
 
 - image_path: /assets/images/originals/products/daito-small.jpg
-  alt: "Daito Valves"
-  title: Daito
-  excerpt: JE 2520
-- image_path: /assets/images/originals/products/daito-small.jpg
-  alt: "Daito Valves"
-  title: Daito
-  excerpt: JE 3520
+  alt: "Daito Japan Valves"
+  title: Daito Japan Valve
+  excerpt: JE 2520 dan JE 3520
+  url: /products/spareparts/daito_valve
 
 ---
 
